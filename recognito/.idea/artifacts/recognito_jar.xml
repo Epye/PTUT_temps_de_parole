@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="recognito:jar">
+    <output-path>$PROJECT_DIR$/classes/artifacts/recognito_jar</output-path>
+    <root id="archive" name="recognito.jar">
+      <element id="module-output" name="recognito" />
+    </root>
+  </artifact>
+</component>
