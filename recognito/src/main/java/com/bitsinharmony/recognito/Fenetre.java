@@ -39,7 +39,6 @@ public class Fenetre extends JFrame implements ActionListener{
     private Recognito<String> recognito;
     private List<MatchResult<String>> matches;
     private String tmpChrono;
-    private String tmpChronoReco;
     private CaptureThread thread;
 
     public Fenetre(){
@@ -50,7 +49,6 @@ public class Fenetre extends JFrame implements ActionListener{
         previousFile = "fichier2.wav";
         fileType = AudioFileFormat.Type.WAVE;
         tmpChrono = "0";
-        tmpChronoReco = "0";
         chronoReco = new Chrono();
 
         taskRepeat = new TimerTask() {
@@ -76,13 +74,12 @@ public class Fenetre extends JFrame implements ActionListener{
 
         taskRepeatChrono = new TimerTask() {
             @Override public void run() {
-                int tmp = Integer.parseInt(tmpChronoReco);
-                tmp += 1;
-                tmpChronoReco = Integer.toString(tmp);
-                labelChronoReco.setText(tmpChronoReco);
+                chronoReco.pause();
+                labelChronoReco.setText(chronoReco.getDureeTxt());
                 if(chronoReco.getDureeSec() > 30){
                     buttonInitRecognito.setEnabled(true);
                 }
+                chronoReco.resume();
             }
         };
 
@@ -90,7 +87,6 @@ public class Fenetre extends JFrame implements ActionListener{
             @Override public void run() {
                 line.stop();
                 line.close();
-                timerChrono.cancel();
                 buttonStart.setEnabled(true);
                 buttonInitialize.setEnabled(true);
                 buttonStopInitialize.setEnabled(false);
@@ -100,6 +96,7 @@ public class Fenetre extends JFrame implements ActionListener{
 
         timer = new Timer();
         timerChrono = new Timer();
+        timerChrono.scheduleAtFixedRate(taskRepeatChrono, 0, 1000);
     }
 
     private void initLayout(){
@@ -202,14 +199,12 @@ public class Fenetre extends JFrame implements ActionListener{
             captureAudio();
             chronoReco.start();
             timer = new Timer();
-            timerChrono.scheduleAtFixedRate(taskRepeatChrono, 0, 1000);
             timer.schedule(taskInit, 60000);
         } else if (e.getSource() == buttonStopInitialize){
             buttonInitialize.setEnabled(true);
             buttonStart.setEnabled(true);
             buttonStopInitialize.setEnabled(false);
             chronoReco.stop();
-            timerChrono.cancel();
             line.stop();
             line.close();
             timer.cancel();
