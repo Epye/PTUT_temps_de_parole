@@ -51,6 +51,14 @@ public class Fenetre extends JFrame implements ActionListener{
         tmpChrono = "0";
         chronoReco = new Chrono();
 
+        initTask();
+
+        timer = new Timer();
+        timerChrono = new Timer();
+        timerChrono.scheduleAtFixedRate(taskRepeatChrono, 0, 1000);
+    }
+
+    private void initTask(){
         taskRepeat = new TimerTask() {
             @Override public void run() {
                 System.out.println("COPIE");
@@ -93,10 +101,6 @@ public class Fenetre extends JFrame implements ActionListener{
                 chronoReco.stop();
             }
         };
-
-        timer = new Timer();
-        timerChrono = new Timer();
-        timerChrono.scheduleAtFixedRate(taskRepeatChrono, 0, 1000);
     }
 
     private void initLayout(){
@@ -109,7 +113,6 @@ public class Fenetre extends JFrame implements ActionListener{
 
         buttonInitRecognito = new JButton("Initialiser Recognito");
         buttonInitRecognito.addActionListener(this);
-        buttonInitRecognito.setEnabled(false);
 
         buttonStopInitialize = new JButton("STOP");
         buttonStopInitialize.setEnabled(false);
@@ -179,6 +182,7 @@ public class Fenetre extends JFrame implements ActionListener{
             currentFile = "fichier1.wav";
             buttonStart.setEnabled(false);
             buttonStop.setEnabled(true);
+            initTask();
             captureAudio();
             timer = new Timer();
             timer.scheduleAtFixedRate(taskRepeat, 7000, 7000);
@@ -198,6 +202,7 @@ public class Fenetre extends JFrame implements ActionListener{
             currentFile = "referent.wav";
             captureAudio();
             chronoReco.start();
+            initTask();
             timer = new Timer();
             timer.schedule(taskInit, 60000);
         } else if (e.getSource() == buttonStopInitialize){
