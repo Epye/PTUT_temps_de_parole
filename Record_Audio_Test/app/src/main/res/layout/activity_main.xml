@@ -5,30 +5,40 @@
     android:layout_height="match_parent">
 
     <Button
+        android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Start"
-        android:id="@+id/button"
-        android:layout_centerHorizontal="true"
         android:layout_above="@+id/button2"
-        />
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/round_button_start"
+        android:padding="12dp"
+        android:text="@string/start"
+        android:textColor="@android:color/white"
+        android:textSize="25sp" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Stop"
+        android:text="@string/stop"
+        android:background="@drawable/round_button_stop_disabled"
+        android:textSize="10sp"
+        android:padding="12dp"
+        android:enabled="false"
+        android:textColor="@android:color/white"
         android:id="@+id/button2"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
         />
 
     <TextView
+        android:id="@+id/data"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/button2"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="12dp"
-        android:layout_below="@+id/button2"
-        android:id="@+id/data"/>
+        android:textStyle="italic" />
 
     <Chronometer
         android:id="@+id/chronometer"
@@ -36,6 +46,7 @@
         android:layout_height="wrap_content"
         android:layout_above="@+id/button"
         android:layout_marginBottom="35dp"
+        android:textSize="72sp"
         android:layout_centerHorizontal="true"/>
 
     <!--<Button

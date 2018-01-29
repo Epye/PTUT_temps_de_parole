@@ -227,7 +227,7 @@ public class Fenetre extends JFrame implements ActionListener{
             VoicePrint print6 = recognito.createVoicePrint("Vanessa", new File("Voice/Vanessa.wav"));
             VoicePrint print7 = recognito.createVoicePrint("Femme1", new File("Voice/Femme1.wav"));
             VoicePrint print8 = recognito.createVoicePrint("Femme2", new File("Voice/Femme2.wav"));
-            //VoicePrint print9 = recognito.createVoicePrint("Benji", new File("Voice/Benji.wav"));
+            VoicePrint print9 = recognito.createVoicePrint("Deline", new File("Voice/Deline.wav"));
             VoicePrint print10 = recognito.createVoicePrint("Boutin", new File("Voice/Boutin.wav"));
             VoicePrint print11 = recognito.createVoicePrint("Bubu", new File("Voice/Bubu.wav"));
             VoicePrint print12 = recognito.createVoicePrint("Farrugia", new File("Voice/Farrugia.wav"));
