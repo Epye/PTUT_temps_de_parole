@@ -40,6 +40,7 @@ public class Fenetre extends JFrame implements ActionListener{
     private List<MatchResult<String>> matches;
     private String tmpChrono;
     private CaptureThread thread;
+    private int tempsCapture = 15;
 
     public Fenetre(){
 
@@ -185,7 +186,7 @@ public class Fenetre extends JFrame implements ActionListener{
             initTask();
             captureAudio();
             timer = new Timer();
-            timer.scheduleAtFixedRate(taskRepeat, 7000, 7000);
+            timer.scheduleAtFixedRate(taskRepeat, tempsCapture*1000, tempsCapture*1000);
         }else if(e.getSource() == buttonStop){
             buttonStart.setEnabled(true);
             buttonStop.setEnabled(false);
@@ -323,7 +324,7 @@ public class Fenetre extends JFrame implements ActionListener{
         System.out.println(matches.get(1).getKey() + " " + matches.get(1).getLikelihoodRatio());
         if(matches.get(0).getKey().equals("Referent") && matches.get(0).getLikelihoodRatio() > 90) {
             int tmp = Integer.parseInt(tmpChrono);
-            tmp += 7;
+            tmp += tempsCapture;
             tmpChrono = Integer.toString(tmp);
             labelChrono.setText(tmpChrono);
         }
