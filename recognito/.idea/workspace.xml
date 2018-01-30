@@ -32,25 +32,23 @@
       <file leaf-file-name="Fenetre.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/bitsinharmony/recognito/Fenetre.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="232">
-              <caret line="193" column="5" lean-forward="true" selection-start-line="193" selection-start-column="5" selection-end-line="193" selection-end-column="5" />
+            <state relative-caret-position="470">
+              <caret line="379" column="23" lean-forward="true" selection-start-line="379" selection-start-column="23" selection-end-line="379" selection-end-column="23" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#initTask#0;class#Fenetre#0" expanded="false" />
-                <element signature="e#1653#2334#0" expanded="true" />
-                <element signature="e#2333#2334#0" expanded="true" />
-                <element signature="e#2364#2714#0" expanded="true" />
-                <element signature="e#2713#2714#0" expanded="true" />
-                <element signature="e#2736#3066#0" expanded="true" />
-                <element signature="e#3065#3066#0" expanded="true" />
-                <element signature="method#initLayout#0;class#Fenetre#0" expanded="false" />
+                <element signature="e#1687#2368#0" expanded="true" />
+                <element signature="e#2367#2368#0" expanded="true" />
+                <element signature="e#2398#2748#0" expanded="true" />
+                <element signature="e#2747#2748#0" expanded="true" />
+                <element signature="e#2770#3100#0" expanded="true" />
+                <element signature="e#3099#3100#0" expanded="true" />
                 <element signature="method#initVar#0;class#Fenetre#0" expanded="false" />
                 <element signature="method#actionPerformed#0;class#Fenetre#0" expanded="false" />
                 <element signature="method#initRecognito#0;class#Fenetre#0" expanded="false" />
                 <element signature="method#captureAudio#0;class#Fenetre#0" expanded="false" />
                 <element signature="method#getAudioFormat#0;class#Fenetre#0" expanded="false" />
                 <element signature="class#CaptureThread#0;class#Fenetre#0" expanded="false" />
-                <element signature="method#verifVoice#0;class#Fenetre#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -470,20 +468,18 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#initTask#0;class#Fenetre#0" expanded="false" />
-            <element signature="e#1653#2334#0" expanded="true" />
-            <element signature="e#2333#2334#0" expanded="true" />
-            <element signature="e#2364#2714#0" expanded="true" />
-            <element signature="e#2713#2714#0" expanded="true" />
-            <element signature="e#2736#3066#0" expanded="true" />
-            <element signature="e#3065#3066#0" expanded="true" />
-            <element signature="method#initLayout#0;class#Fenetre#0" expanded="false" />
+            <element signature="e#1687#2368#0" expanded="true" />
+            <element signature="e#2367#2368#0" expanded="true" />
+            <element signature="e#2398#2748#0" expanded="true" />
+            <element signature="e#2747#2748#0" expanded="true" />
+            <element signature="e#2770#3100#0" expanded="true" />
+            <element signature="e#3099#3100#0" expanded="true" />
             <element signature="method#initVar#0;class#Fenetre#0" expanded="false" />
             <element signature="method#actionPerformed#0;class#Fenetre#0" expanded="false" />
             <element signature="method#initRecognito#0;class#Fenetre#0" expanded="false" />
             <element signature="method#captureAudio#0;class#Fenetre#0" expanded="false" />
             <element signature="method#getAudioFormat#0;class#Fenetre#0" expanded="false" />
             <element signature="class#CaptureThread#0;class#Fenetre#0" expanded="false" />
-            <element signature="method#verifVoice#0;class#Fenetre#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -520,20 +516,18 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#initTask#0;class#Fenetre#0" expanded="false" />
-            <element signature="e#1653#2334#0" expanded="true" />
-            <element signature="e#2333#2334#0" expanded="true" />
-            <element signature="e#2364#2714#0" expanded="true" />
-            <element signature="e#2713#2714#0" expanded="true" />
-            <element signature="e#2736#3066#0" expanded="true" />
-            <element signature="e#3065#3066#0" expanded="true" />
-            <element signature="method#initLayout#0;class#Fenetre#0" expanded="false" />
+            <element signature="e#1687#2368#0" expanded="true" />
+            <element signature="e#2367#2368#0" expanded="true" />
+            <element signature="e#2398#2748#0" expanded="true" />
+            <element signature="e#2747#2748#0" expanded="true" />
+            <element signature="e#2770#3100#0" expanded="true" />
+            <element signature="e#3099#3100#0" expanded="true" />
             <element signature="method#initVar#0;class#Fenetre#0" expanded="false" />
             <element signature="method#actionPerformed#0;class#Fenetre#0" expanded="false" />
             <element signature="method#initRecognito#0;class#Fenetre#0" expanded="false" />
             <element signature="method#captureAudio#0;class#Fenetre#0" expanded="false" />
             <element signature="method#getAudioFormat#0;class#Fenetre#0" expanded="false" />
             <element signature="class#CaptureThread#0;class#Fenetre#0" expanded="false" />
-            <element signature="method#verifVoice#0;class#Fenetre#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -570,20 +564,18 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#initTask#0;class#Fenetre#0" expanded="false" />
-            <element signature="e#1653#2334#0" expanded="true" />
-            <element signature="e#2333#2334#0" expanded="true" />
-            <element signature="e#2364#2714#0" expanded="true" />
-            <element signature="e#2713#2714#0" expanded="true" />
-            <element signature="e#2736#3066#0" expanded="true" />
-            <element signature="e#3065#3066#0" expanded="true" />
-            <element signature="method#initLayout#0;class#Fenetre#0" expanded="false" />
+            <element signature="e#1687#2368#0" expanded="true" />
+            <element signature="e#2367#2368#0" expanded="true" />
+            <element signature="e#2398#2748#0" expanded="true" />
+            <element signature="e#2747#2748#0" expanded="true" />
+            <element signature="e#2770#3100#0" expanded="true" />
+            <element signature="e#3099#3100#0" expanded="true" />
             <element signature="method#initVar#0;class#Fenetre#0" expanded="false" />
             <element signature="method#actionPerformed#0;class#Fenetre#0" expanded="false" />
             <element signature="method#initRecognito#0;class#Fenetre#0" expanded="false" />
             <element signature="method#captureAudio#0;class#Fenetre#0" expanded="false" />
             <element signature="method#getAudioFormat#0;class#Fenetre#0" expanded="false" />
             <element signature="class#CaptureThread#0;class#Fenetre#0" expanded="false" />
-            <element signature="method#verifVoice#0;class#Fenetre#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -620,20 +612,18 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#initTask#0;class#Fenetre#0" expanded="false" />
-            <element signature="e#1653#2334#0" expanded="true" />
-            <element signature="e#2333#2334#0" expanded="true" />
-            <element signature="e#2364#2714#0" expanded="true" />
-            <element signature="e#2713#2714#0" expanded="true" />
-            <element signature="e#2736#3066#0" expanded="true" />
-            <element signature="e#3065#3066#0" expanded="true" />
-            <element signature="method#initLayout#0;class#Fenetre#0" expanded="false" />
+            <element signature="e#1687#2368#0" expanded="true" />
+            <element signature="e#2367#2368#0" expanded="true" />
+            <element signature="e#2398#2748#0" expanded="true" />
+            <element signature="e#2747#2748#0" expanded="true" />
+            <element signature="e#2770#3100#0" expanded="true" />
+            <element signature="e#3099#3100#0" expanded="true" />
             <element signature="method#initVar#0;class#Fenetre#0" expanded="false" />
             <element signature="method#actionPerformed#0;class#Fenetre#0" expanded="false" />
             <element signature="method#initRecognito#0;class#Fenetre#0" expanded="false" />
             <element signature="method#captureAudio#0;class#Fenetre#0" expanded="false" />
             <element signature="method#getAudioFormat#0;class#Fenetre#0" expanded="false" />
             <element signature="class#CaptureThread#0;class#Fenetre#0" expanded="false" />
-            <element signature="method#verifVoice#0;class#Fenetre#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -655,20 +645,18 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#initTask#0;class#Fenetre#0" expanded="false" />
-            <element signature="e#1653#2334#0" expanded="true" />
-            <element signature="e#2333#2334#0" expanded="true" />
-            <element signature="e#2364#2714#0" expanded="true" />
-            <element signature="e#2713#2714#0" expanded="true" />
-            <element signature="e#2736#3066#0" expanded="true" />
-            <element signature="e#3065#3066#0" expanded="true" />
-            <element signature="method#initLayout#0;class#Fenetre#0" expanded="false" />
+            <element signature="e#1687#2368#0" expanded="true" />
+            <element signature="e#2367#2368#0" expanded="true" />
+            <element signature="e#2398#2748#0" expanded="true" />
+            <element signature="e#2747#2748#0" expanded="true" />
+            <element signature="e#2770#3100#0" expanded="true" />
+            <element signature="e#3099#3100#0" expanded="true" />
             <element signature="method#initVar#0;class#Fenetre#0" expanded="false" />
             <element signature="method#actionPerformed#0;class#Fenetre#0" expanded="false" />
             <element signature="method#initRecognito#0;class#Fenetre#0" expanded="false" />
             <element signature="method#captureAudio#0;class#Fenetre#0" expanded="false" />
             <element signature="method#getAudioFormat#0;class#Fenetre#0" expanded="false" />
             <element signature="class#CaptureThread#0;class#Fenetre#0" expanded="false" />
-            <element signature="method#verifVoice#0;class#Fenetre#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -720,20 +708,18 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#initTask#0;class#Fenetre#0" expanded="false" />
-            <element signature="e#1653#2334#0" expanded="true" />
-            <element signature="e#2333#2334#0" expanded="true" />
-            <element signature="e#2364#2714#0" expanded="true" />
-            <element signature="e#2713#2714#0" expanded="true" />
-            <element signature="e#2736#3066#0" expanded="true" />
-            <element signature="e#3065#3066#0" expanded="true" />
-            <element signature="method#initLayout#0;class#Fenetre#0" expanded="false" />
+            <element signature="e#1687#2368#0" expanded="true" />
+            <element signature="e#2367#2368#0" expanded="true" />
+            <element signature="e#2398#2748#0" expanded="true" />
+            <element signature="e#2747#2748#0" expanded="true" />
+            <element signature="e#2770#3100#0" expanded="true" />
+            <element signature="e#3099#3100#0" expanded="true" />
             <element signature="method#initVar#0;class#Fenetre#0" expanded="false" />
             <element signature="method#actionPerformed#0;class#Fenetre#0" expanded="false" />
             <element signature="method#initRecognito#0;class#Fenetre#0" expanded="false" />
             <element signature="method#captureAudio#0;class#Fenetre#0" expanded="false" />
             <element signature="method#getAudioFormat#0;class#Fenetre#0" expanded="false" />
             <element signature="class#CaptureThread#0;class#Fenetre#0" expanded="false" />
-            <element signature="method#verifVoice#0;class#Fenetre#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -755,20 +741,18 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#initTask#0;class#Fenetre#0" expanded="false" />
-            <element signature="e#1653#2334#0" expanded="true" />
-            <element signature="e#2333#2334#0" expanded="true" />
-            <element signature="e#2364#2714#0" expanded="true" />
-            <element signature="e#2713#2714#0" expanded="true" />
-            <element signature="e#2736#3066#0" expanded="true" />
-            <element signature="e#3065#3066#0" expanded="true" />
-            <element signature="method#initLayout#0;class#Fenetre#0" expanded="false" />
+            <element signature="e#1687#2368#0" expanded="true" />
+            <element signature="e#2367#2368#0" expanded="true" />
+            <element signature="e#2398#2748#0" expanded="true" />
+            <element signature="e#2747#2748#0" expanded="true" />
+            <element signature="e#2770#3100#0" expanded="true" />
+            <element signature="e#3099#3100#0" expanded="true" />
             <element signature="method#initVar#0;class#Fenetre#0" expanded="false" />
             <element signature="method#actionPerformed#0;class#Fenetre#0" expanded="false" />
             <element signature="method#initRecognito#0;class#Fenetre#0" expanded="false" />
             <element signature="method#captureAudio#0;class#Fenetre#0" expanded="false" />
             <element signature="method#getAudioFormat#0;class#Fenetre#0" expanded="false" />
             <element signature="class#CaptureThread#0;class#Fenetre#0" expanded="false" />
-            <element signature="method#verifVoice#0;class#Fenetre#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -973,25 +957,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/bitsinharmony/recognito/Fenetre.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="193" column="5" lean-forward="true" selection-start-line="193" selection-start-column="5" selection-end-line="193" selection-end-column="5" />
+        <state relative-caret-position="470">
+          <caret line="379" column="23" lean-forward="true" selection-start-line="379" selection-start-column="23" selection-end-line="379" selection-end-column="23" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#initTask#0;class#Fenetre#0" expanded="false" />
-            <element signature="e#1653#2334#0" expanded="true" />
-            <element signature="e#2333#2334#0" expanded="true" />
-            <element signature="e#2364#2714#0" expanded="true" />
-            <element signature="e#2713#2714#0" expanded="true" />
-            <element signature="e#2736#3066#0" expanded="true" />
-            <element signature="e#3065#3066#0" expanded="true" />
-            <element signature="method#initLayout#0;class#Fenetre#0" expanded="false" />
+            <element signature="e#1687#2368#0" expanded="true" />
+            <element signature="e#2367#2368#0" expanded="true" />
+            <element signature="e#2398#2748#0" expanded="true" />
+            <element signature="e#2747#2748#0" expanded="true" />
+            <element signature="e#2770#3100#0" expanded="true" />
+            <element signature="e#3099#3100#0" expanded="true" />
             <element signature="method#initVar#0;class#Fenetre#0" expanded="false" />
             <element signature="method#actionPerformed#0;class#Fenetre#0" expanded="false" />
             <element signature="method#initRecognito#0;class#Fenetre#0" expanded="false" />
             <element signature="method#captureAudio#0;class#Fenetre#0" expanded="false" />
             <element signature="method#getAudioFormat#0;class#Fenetre#0" expanded="false" />
             <element signature="class#CaptureThread#0;class#Fenetre#0" expanded="false" />
-            <element signature="method#verifVoice#0;class#Fenetre#0" expanded="false" />
           </folding>
         </state>
       </provider>

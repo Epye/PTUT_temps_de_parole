@@ -24,6 +24,7 @@ public class Fenetre extends JFrame implements ActionListener{
     private JLabel labelChronoReco;
     private JLabel labelInit;
     private JLabel labelConv;
+    private JLabel labelReferent;
     private JLabel labelDelineRecognition;
     private JLabel labelJohanRecognition;
     private Chrono chronoReco;
@@ -136,6 +137,7 @@ public class Fenetre extends JFrame implements ActionListener{
         labelChronoReco = new JLabel("0s");
         labelDelineRecognition = new JLabel("...");
         labelJohanRecognition = new JLabel("...");
+        labelReferent = new JLabel("...");
 
         cont.gridx=1;
         cont.gridy=0;
@@ -165,6 +167,9 @@ public class Fenetre extends JFrame implements ActionListener{
 
         cont.gridx = 2;
         pan.add(buttonStop, cont);
+
+        cont.gridx = 3;
+        pan.add(labelReferent, cont);
 
         cont.gridy = 5;
         cont.gridx = 1;
@@ -257,7 +262,7 @@ public class Fenetre extends JFrame implements ActionListener{
             }
         } else if (e.getSource() == buttonJohanRecognition){
             try {
-                matches = recognito.identify(new File("Voice/Johanleplusbeau.wav"));
+                matches = recognito.identify(new File("Voice/Johan30.wav"));
                 labelJohanRecognition.setText(matches.get(0).getKey() + " " + matches.get(0).getLikelihoodRatio() + "%");
             } catch (UnsupportedAudioFileException e1) {
                 e1.printStackTrace();
@@ -367,8 +372,7 @@ public class Fenetre extends JFrame implements ActionListener{
 
     private void verifVoice() throws IOException, UnsupportedAudioFileException {
         matches = recognito.identify(new File(previousFile));
-        System.out.println(matches.get(0).getKey() + " " + matches.get(0).getLikelihoodRatio());
-        System.out.println(matches.get(1).getKey() + " " + matches.get(1).getLikelihoodRatio());
+        labelReferent.setText(matches.get(0).getKey() + " " + matches.get(0).getLikelihoodRatio() + "%");
         if(matches.get(0).getKey().equals("Referent") && matches.get(0).getLikelihoodRatio() > 90) {
             int tmp = Integer.parseInt(tmpChrono);
             tmp += tempsCapture;
