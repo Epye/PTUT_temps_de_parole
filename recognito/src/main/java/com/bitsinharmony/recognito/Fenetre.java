@@ -18,10 +18,14 @@ public class Fenetre extends JFrame implements ActionListener{
     private JButton buttonInitialize;
     private JButton buttonInitRecognito;
     private JButton buttonStopInitialize;
+    private JButton buttonDelineRecognition;
+    private JButton buttonJohanRecognition;
     private JLabel labelChrono;
     private JLabel labelChronoReco;
     private JLabel labelInit;
     private JLabel labelConv;
+    private JLabel labelDelineRecognition;
+    private JLabel labelJohanRecognition;
     private Chrono chronoReco;
     private JPanel pan;
     private Timer timer;
@@ -43,20 +47,9 @@ public class Fenetre extends JFrame implements ActionListener{
     private int tempsCapture = 15;
 
     public Fenetre(){
-
         initLayout();
-
-        currentFile = "fichier1.wav";
-        previousFile = "fichier2.wav";
-        fileType = AudioFileFormat.Type.WAVE;
-        tmpChrono = "0";
-        chronoReco = new Chrono();
-
         initTask();
-
-        timer = new Timer();
-        timerChrono = new Timer();
-        timerChrono.scheduleAtFixedRate(taskRepeatChrono, 0, 1000);
+        initVar();
     }
 
     private void initTask(){
@@ -105,6 +98,12 @@ public class Fenetre extends JFrame implements ActionListener{
     }
 
     private void initLayout(){
+        //Instanciation d'un objet JPanel
+        pan = new JPanel();
+        pan.setLayout(new GridBagLayout());
+        GridBagConstraints cont = new GridBagConstraints();
+        cont.fill = GridBagConstraints.BOTH;
+
         buttonStart = new JButton("START");
         buttonStart.addActionListener(this);
         buttonStart.setEnabled(false);
@@ -123,16 +122,20 @@ public class Fenetre extends JFrame implements ActionListener{
         buttonStop.setEnabled(false);
         buttonStop.addActionListener(this);
 
+        buttonDelineRecognition = new JButton("Recognito with Adeline");
+        buttonDelineRecognition.addActionListener(this);
+        buttonDelineRecognition.setEnabled(false);
+
+        buttonJohanRecognition = new JButton("Recognito with Johan");
+        buttonJohanRecognition.addActionListener(this);
+        buttonJohanRecognition.setEnabled(false);
+
         labelInit = new JLabel("Initialisation");
         labelConv = new JLabel("Lancer la Conv");
-        labelChrono = new JLabel(tmpChrono);
+        labelChrono = new JLabel("0");
         labelChronoReco = new JLabel("0s");
-
-        //Instanciation d'un objet JPanel
-        pan = new JPanel();
-        pan.setLayout(new GridBagLayout());
-        GridBagConstraints cont = new GridBagConstraints();
-        cont.fill = GridBagConstraints.BOTH;
+        labelDelineRecognition = new JLabel("...");
+        labelJohanRecognition = new JLabel("...");
 
         cont.gridx=1;
         cont.gridy=0;
@@ -167,14 +170,38 @@ public class Fenetre extends JFrame implements ActionListener{
         cont.gridx = 1;
         pan.add(labelChrono, cont);
 
+        cont.gridy = 6;
+        cont.gridx = 0;
+        pan.add(buttonDelineRecognition, cont);
+
+        cont.gridx = 2;
+        pan.add(buttonJohanRecognition, cont);
+
+        cont.gridy = 7;
+        cont.gridx = 1;
+        pan.add(labelDelineRecognition, cont);
+
+        cont.gridx = 3;
+        pan.add(labelJohanRecognition, cont);
+
         this.setTitle("Recognito");
-        this.setSize(600, 250);
+        this.setSize(700, 250);
         this.setLocationRelativeTo(null);
-        //On prévient notre JFrame que notre JPanel sera son content pane
         this.setContentPane(pan);
         this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
         this.setVisible(true);
+    }
+
+    private void initVar(){
+        currentFile = "fichier1.wav";
+        previousFile = "fichier2.wav";
+        fileType = AudioFileFormat.Type.WAVE;
+        tmpChrono = "0";
+        chronoReco = new Chrono();
+        timer = new Timer();
+        timerChrono = new Timer();
+        timerChrono.scheduleAtFixedRate(taskRepeatChrono, 0, 1000);
     }
 
     @Override
@@ -217,6 +244,26 @@ public class Fenetre extends JFrame implements ActionListener{
         } else if (e.getSource() == buttonInitRecognito){
             initRecognito();
             buttonStart.setEnabled(true);
+            buttonDelineRecognition.setEnabled(true);
+            buttonJohanRecognition.setEnabled(true);
+        } else if (e.getSource() == buttonDelineRecognition){
+            try {
+                matches = recognito.identify(new File("Voice/Deline10.wav"));
+                labelDelineRecognition.setText(matches.get(0).getKey() + " " + matches.get(0).getLikelihoodRatio() + "%");
+            } catch (UnsupportedAudioFileException e1) {
+                e1.printStackTrace();
+            } catch (IOException e1) {
+                e1.printStackTrace();
+            }
+        } else if (e.getSource() == buttonJohanRecognition){
+            try {
+                matches = recognito.identify(new File("Voice/Johanleplusbeau.wav"));
+                labelJohanRecognition.setText(matches.get(0).getKey() + " " + matches.get(0).getLikelihoodRatio() + "%");
+            } catch (UnsupportedAudioFileException e1) {
+                e1.printStackTrace();
+            } catch (IOException e1) {
+                e1.printStackTrace();
+            }
         }
     }
 
@@ -228,7 +275,7 @@ public class Fenetre extends JFrame implements ActionListener{
 
             VoicePrint print2 = recognito.createVoicePrint("Brian", new File("Voice/brian.wav"));
             VoicePrint print3 = recognito.createVoicePrint("Nico", new File("Voice/Nico.wav"));
-            VoicePrint print4 = recognito.createVoicePrint("Johan", new File("Voice/Johanleplusbeau.wav"));
+            VoicePrint print4 = recognito.createVoicePrint("Johan", new File("Voice/Johan.wav"));
             VoicePrint print5 = recognito.createVoicePrint("Gaga", new File("Voice/Gaga.wav"));
             VoicePrint print6 = recognito.createVoicePrint("Vanessa", new File("Voice/Vanessa.wav"));
             VoicePrint print7 = recognito.createVoicePrint("Femme1", new File("Voice/Femme1.wav"));
