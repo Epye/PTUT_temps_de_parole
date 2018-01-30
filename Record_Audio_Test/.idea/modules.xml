@@ -3,6 +3,10 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Record_Audio_Test.iml" filepath="$PROJECT_DIR$/Record_Audio_Test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Record_Audio_Test.iml" filepath="$PROJECT_DIR$/Record_Audio_Test.iml" />
+      <module fileurl="file://D:\Johan\Desktop\PTUT_temps_de_parole\Record_Audio_Test\Record_Audio_Test.iml" filepath="D:\Johan\Desktop\PTUT_temps_de_parole\Record_Audio_Test\Record_Audio_Test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://D:\Johan\Desktop\PTUT_temps_de_parole\Record_Audio_Test\app\app.iml" filepath="D:\Johan\Desktop\PTUT_temps_de_parole\Record_Audio_Test\app\app.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

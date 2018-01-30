@@ -24,9 +24,9 @@ public class SoundMeter implements Runnable {
     public void startChrono() {
             mRecorder = new MediaRecorder();
             mRecorder.setAudioSource(MediaRecorder.AudioSource.MIC);
-            mRecorder.setOutputFormat(MediaRecorder.OutputFormat.THREE_GPP);
+            mRecorder.setOutputFormat(MediaRecorder.OutputFormat.THREE_GPP); //format 3gp
             mRecorder.setAudioEncoder(MediaRecorder.AudioEncoder.AMR_NB);
-            mRecorder.setOutputFile("/dev/null");
+            mRecorder.setOutputFile("/dev/null"); //le fichier son n'est pas enregistré sur l'appareil
             try {
                 mRecorder.prepare();
             } catch (IOException e) {
@@ -41,10 +41,6 @@ public class SoundMeter implements Runnable {
             mRecorder.stop();
             isRunning=false;
         }
-    }
-
-    public String getChrono(){
-        return "";
     }
 
     public double getAmplitude() {
@@ -65,8 +61,8 @@ public class SoundMeter implements Runnable {
         this.startChrono();
         while (isRunning){
             double tmp=this.getAmplitude();
-            data+=tmp+"\n";
-            if(tmp>8000){
+            data+=tmp+"\n"; //sauvegarde des données
+            if(tmp>Global.seuilVolume){
                 ctx.runOnUiThread(new Runnable() {
                     public void run() {
                         ctx.Resume();
@@ -76,7 +72,7 @@ public class SoundMeter implements Runnable {
                 System.out.println(tmp);
             }else{
                 cpt++;
-                if(cpt>500){
+                if(cpt>Global.intervalle){
                     ctx.runOnUiThread(new Runnable() {
                         public void run() {
                             ctx.Stop();
