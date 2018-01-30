@@ -45,7 +45,7 @@ public class Fenetre extends JFrame implements ActionListener{
     private List<MatchResult<String>> matches;
     private String tmpChrono;
     private CaptureThread thread;
-    private int tempsCapture = 15;
+    private int tempsCapture = 10;
 
     public Fenetre(){
         initLayout();
@@ -285,10 +285,8 @@ public class Fenetre extends JFrame implements ActionListener{
             VoicePrint print6 = recognito.createVoicePrint("Vanessa", new File("Voice/Vanessa.wav"));
             VoicePrint print7 = recognito.createVoicePrint("Femme1", new File("Voice/Femme1.wav"));
             VoicePrint print8 = recognito.createVoicePrint("Femme2", new File("Voice/Femme2.wav"));
-            VoicePrint print9 = recognito.createVoicePrint("Deline", new File("Voice/Deline.wav"));
+            //VoicePrint print9 = recognito.createVoicePrint("Deline", new File("Voice/Deline.wav"));
             VoicePrint print10 = recognito.createVoicePrint("Boutin", new File("Voice/Boutin.wav"));
-            VoicePrint print11 = recognito.createVoicePrint("Bubu", new File("Voice/Bubu.wav"));
-            VoicePrint print12 = recognito.createVoicePrint("Farrugia", new File("Voice/Farrugia.wav"));
             VoicePrint print13 = recognito.createVoicePrint("Femme5", new File("Voice/Femme5.wav"));
             VoicePrint print14 = recognito.createVoicePrint("Femme6", new File("Voice/Femme6.wav"));
             VoicePrint print15 = recognito.createVoicePrint("Femme7", new File("Voice/Femme7.wav"));
